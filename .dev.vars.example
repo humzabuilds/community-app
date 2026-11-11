@@ -1,0 +1,2 @@
+# Copy to .dev.vars for local overrides. Never commit .dev.vars.
+ADMIN_EMAIL=you@example.com

@@ -1,0 +1,22 @@
+{
+  "name": "community-app",
+  "version": "1.0.0",
+  "scripts": {
+    "db:migrate": "wrangler d1 migrations apply community --local",
+    "db:reset": "rm -rf .wrangler/state/v3/d1 && wrangler d1 migrations apply community --local",
+    "dev": "wrangler d1 migrations apply community --local && wrangler dev --port 8787",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.13.16"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261106.1",
+    "typescript": "^7.0.2",
+    "vitest": "^3.2.7",
+    "wrangler": "^4.158.0"
+  },
+  "private": true,
+  "type": "module"
+}
